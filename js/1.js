@@ -8,5 +8,5 @@ function task1()
     createPCLink = createLinkTovar('pc');
     createMonitorLink = createLinkTovar('monitors');
     createNotebooksLink = createLinkTovar('notebooks');
-    console.log(createPCLink);
+    console.log(createPCLink(1001));
 }
