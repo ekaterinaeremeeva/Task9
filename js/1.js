@@ -76,18 +76,24 @@ function task3()
 
 function task4()
 {
-    function Menu(...navList){
-        this.navList=navList;
-        this.wrapperA=function(){
-            return this.navList.map(elem=>`<a href='${elem}'>item</a>`);
+    function Menu(...navList) {
+        this.navList = navList;
+        this.wrapperA = function() {
+            return this.navList.map(elem => `<a href='${elem}'>item</a>`);
         }
     }
-    let mainMenu=new Menu("home.html","services.html","price.html","about.html");
-    for (elem of mainMenu.navList)
-        console.log(elem);
-        console.log(mainMenu.wrapperA());
-    let footerMenu=new Menu("newPage.html","checkPage.html","seoPage.html");
-    for (elem of footerMenu.navList)
-        console.log(elem);
-        console.log(footerMenu.wrapperA()); 
+    let mainMenu = new Menu("home.html", "services.html", "price.html", "about.html");
+    for(elem of mainMenu.navList) 
+    var elem = 0;
+    while(elem <= mainMenu.wrapperA().length - 1) {
+        console.log(mainMenu.wrapperA()[elem]);
+        elem = elem + 1;
+    }
+    let footerMenu = new Menu("newPage.html", "checkPage.html", "seoPage.html");
+    for(elem of footerMenu.navList) 
+    var elem = 0;
+    while(elem <= footerMenu.wrapperA().length - 1) {
+        console.log(footerMenu.wrapperA()[elem]);
+        elem = elem + 1;
+    }
 }
